@@ -10,13 +10,67 @@
         rel="stylesheet" />
     <!-- Bebas Neue font  -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <!-- Roboto font  -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+        rel="stylesheet" />
     <!-- tailwindcss cdn  -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- internal css  -->
+    <style>
+        #mb-nav-menu {
+            margin-left: -100%;
+        }
+
+        #menu:checked~#mb-nav-menu {
+            margin-left: 0;
+        }
+    </style>
+
     <title>Penguin Fashion</title>
 </head>
 
-<body>
-    <h1 class="text-5xl">Hello World!</h1>
+<body class="font-['Roboto']">
+    <img class="absolute top-0 start-1/4 hidden xl:block" src="./images/orrange-dots.svg" alt="">
+    <nav class="px-2 lg:px-28 py-5 lg:py-10 flex justify-between items-center bg-[#FFF9F4]">
+
+
+        <!-- logo  -->
+        <div class="flex items-center md:space-x-2 lg:space-x-4">
+            <img src="./images/logo.svg" alt="logo img">
+            <h3 class="text-lg font-['Montserrat'] font-bold">
+                <span class="text-[#FA804C]">Penguin</span>
+                <span class="text-[#363958]">Fashion</span>
+            </h3>
+        </div>
+
+
+        <label class="md:hidden" for="menu">menu</label>
+
+        <!-- nav list for laptop -->
+        <ul class="hidden lg:flex lg:space-x-16">
+            <li>Home</li>
+            <li>Product</li>
+            <li>About us</li>
+            <li>Contact us</li>
+        </ul>
+    </nav>
+
+
+    <!-- nav list for mobile -->
+    <div class="relative">
+        <input class="hidden" type="checkbox" name="menu" id="menu">
+        <ul id="mb-nav-menu" class="w-full absolute flex flex-col lg:hidden space-y-8 py-3 bg-gray-100 text-center">
+            <li>Home</li>
+            <li>Product</li>
+            <li>About us</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+
+
+
 </body>
 
 </html>
