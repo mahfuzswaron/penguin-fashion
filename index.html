@@ -16,6 +16,19 @@
         rel="stylesheet" />
     <!-- tailwindcss cdn  -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        #small-device-menu {
+            position: absolute;
+            left: -100%;
+            width: 100%;
+        }
+
+        #toggle-menu:checked~#small-device-menu {
+            left: 0;
+        }
+    </style>
+
     <title>Penguin Fashion</title>
 </head>
 
@@ -31,7 +44,6 @@
             </h3>
         </div>
 
-        <input class="hidden" type="checkbox" name="toggle-menu" id="toggle-menu">
         <label class="lg:hidden" for="toggle-menu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -40,6 +52,7 @@
 
         </label>
 
+        <!-- for laptop -->
         <ul class="hidden lg:flex space-x-16">
             <li>Home</li>
             <li>Product</li>
@@ -48,6 +61,15 @@
         </ul>
 
     </nav>
+
+    <input class="hidden" type="checkbox" name="toggle-menu" id="toggle-menu">
+    <ul id="small-device-menu" class="text-center bg-gray-100 space-y-10 py-5">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+        <li>Contact us</li>
+    </ul>
+
 </body>
 
 </html>
