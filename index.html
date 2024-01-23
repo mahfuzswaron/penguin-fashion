@@ -33,8 +33,11 @@
 </head>
 
 <body class="font-['Roboto']">
+
+    <!-- note: section padding: p-5 md:px-16 xl:px-28 -->
+
     <img class="hidden lg:block absolute left-96" src="./images/orrange-dots.svg" alt="dot img">
-    <nav class="flex justify-between items-center px-5 md:px-20 py-10 bg-[#FFF9F4]">
+    <nav class="flex justify-between items-center px-5 py-10 md:px-16 xl:px-28 bg-[#FFF9F4]">
         <!-- logo  -->
         <div class="flex items-center space-x-4">
             <img src="./images/logo.svg" alt="">
@@ -73,17 +76,19 @@
     <!-- nav end -->
 
     <!-- hero section  -->
-    <section>
+    <section class="flex flex-col-reverse lg:flex-row justify-between items-center p-5 md:px-16 xl:px-28 bg-[#FFF9F4]">
         <img src="./images/banner-shoe.png" alt="shoe">
         <div>
-            <h1>
-                <span>NIKE REACT</span>
-                <span>INFINITY RUN 2</span>
+            <h1 class="text-8xl font-['Bebas_Neue']">
+                <span class="text-[#FA804C]">NIKE REACT</span>
+                <br>
+                <span class="text-[#363958]">INFINITY RUN 2</span>
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab aliquid nobis autem iusto laborum!
+            <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ab aliquid nobis autem
+                iusto laborum!
             </p>
 
-            <button>
+            <button class="bg-blue-700 px-6 py-3 rounded-lg flex space-x-2 text-white  mt-4">
                 <img src="./images/shopping-cart 1.svg" alt="">
                 <span>BUY NOW</span>
             </button>
